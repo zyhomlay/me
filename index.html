@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Student Portfolio</title>  <style>
+    :root {
+      --bg: #020617;
+      --card: #0b1220;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.2);
+    }
+
+
+    * { box-sizing: border-box; }
+
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+
+    header {
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+    }
+
+
+    .terminal {
+      background: black;
+      border: 1px solid var(--accent);
+      border-radius: 0.75rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      padding: 1rem;
+      font-family: monospace;
+      color: var(--accent);
+      box-shadow: 0 0 25px var(--accent-soft);
+    }
+
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+    nav a:hover { text-decoration: underline; }
+
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+
+    section {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid #111827;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+
+    section h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+
+    .card {
+      background: #020617;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      border: 1px solid #111827;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--accent-soft);
+    }
+
+
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.4rem;
+      font-size: 0.8rem;
+      margin-right: 0.3rem;
+    }
+
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 2rem 1rem;
+    }
+  .footer-image {
+    max-width: 100%;   /* prevents overflow */
+    height: auto;      /* keeps aspect ratio */
+    display: block;    /* removes small gaps */
+    margin-top: 4rem;
+    margin: 0 auto;    /* centers the image */
+  }
+
+.portfolio-footer img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 300px;   /* adjust as needed */
+  object-fit: contain;
+}
+
+
+
+    /* Certificate images */
+    .cert-img {
+      width: 100%;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+
+    .cert-img:hover { transform: scale(1.03); }
+
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 1rem;
+      box-shadow: 0 0 40px var(--accent-soft);
+      border: 2px solid var(--accent);
+    }
+
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: var(--accent);
+      cursor: pointer;
+      font-family: monospace;
+    }
+
+
+    .badge {
+      width: 120px;
+      margin-top: 1rem;
+    }
+
+
+  </style></head>
+<body><header>
+  <div class="terminal">
+    <div id="typing"></div>
+  </div>  <nav>
+    <a href="#about">About</a>
+    <a href="#certs">Certificates</a>
+    <a href="#labs">Labs</a>
+    <a href="#blog">Blog</a>
+    <a href="#documents">Documents</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><main><section id="about">
+  <h2>About Me</h2>
+  <div style="display:grid;grid-template-columns:150px 1fr;gap:1.5rem;align-items:center;">
+    <img src="profile.jpg" alt="Profile" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 20px var(--accent-soft);">
+    <div>
+      <p>Hi, I am an entry-level SOC analyst, passionate about computer science, especially cybersecurity, and most skilled at writing reports and documentation. My greatest strength is persistency and patience. </p>
+      <p>What motivates me the most is exploring what I don't know and figuring out new methods, tools, and aspects. I am passionate about balancing theory with practice, and I value collaboration, problem-solving, and inclusivity.</p>
+    </div>
+  </div>
+</section><section id="certs">
+  <h2>Certificates</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="cert-google.jpeg" data-full="cert-google.jpeg" class="cert-img" alt="Google Cybersecurity Certificate">
+      <p>Google Cybersecurity Professional Certificate</p>
+    </div>
+    <div class="card">
+      <img src="cert-advent.jpg" data-full="cert-advent.jpg" class="cert-img" alt="Advent of Cyber 2025">
+      <p>Advent of Cyber 2025</p>
+    </div>
+    <div class="card">
+      <img src="Coursera_TSF.png" data-full="Coursera_TSF.png" class="cert-img" alt="Coursera Technical Support Certificate">
+      <p>Technical Support Fundementals</p>
+    </div>
+      <p>View my full certificates on: <br> 
+        <a style="color:var(--accent);" href="https://www.coursera.org/user/974386d075a5528db76fa35f912c0094" target="_blank">Coursera Profile</a><br>
+        <a style="color:var(--accent);" href="https://www.linkedin.com/in/zohal-haidari-zyhomlay" target="_blank">LinkedIn Certificates</a>
+      </p>
+  </div>
+</section>
+<section id="labs">
+  <h2>Hands-on Labs</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>TryHackMe</h3>
+      <p>Completed some beginner-level rooms in TryHackMe, showcasing practical learning experience. </p>
+      <a href="https://tryhackme.com/p/Zyhomlay" target="_blank">View Profile</a>
+    </div>
+    <div class="card">
+      <h3>CTF Practice</h3>
+      <p>Basic capture-the-flag challenges.</p>
+    </div>
+    <div class="card">
+      <h3>Skills</h3>
+      <p>
+        <span class="tag" style="margin-top: 10px;">Intrusion Detection/Prevention System</span>
+        <span class="tag" style="margin-top: 10px;">SIEM</span>
+        <span class="tag" style="margin-top: 10px;">Basic Linux/SQL</span>
+        <span class="tag" style="margin-top: 10px;">Network Security</span>
+        <span class="tag" style="margin-top: 10px;">Python</span>
+      </p>
+    </div>
+  </div>
+</section><section id="blog">
+  <h2>Blog & Writeups</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Nmap</h3>
+      <p>A TryHackMe writeup about using the network mapper tool: Nmap.</p>
+      <a href="https://medium.com/@Zyhomlay/tryhackme-writeup-further-nmap-7ce49e9ae588" target="_blank">Read</a>
+    </div>
+    <div class="card">
+      <h3>Snort</h3>
+      <p>A network IDS/IPS tool for monitoring, detecting, and preventing malicious network traffic.</p>
+      <a href="https://medium.com/@Zyhomlay/tryhackme-writeup-snort-35fe0098467a" target="_blank">Read</a>
+    </div>
+    <div class="card">
+      <p>Follow my writing on:</p>
+      <a href="https://medium.com/@Zyhomlay" target="_blank">Medium Profile</a>
+    </div>
+  </div>
+</section><section id="documents">
+  <h2>Portfolio Documents</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Security Reports</h3>
+      <p>View my full document collection on Google Drive.</p>
+      <a href="https://drive.google.com/drive/folders/1boRAfPEbJ_4WDXKUwSgWq5Ye6vofzkUF?usp=drive_link" target="_blank">Open Drive Folder</a>
+    </div>
+    <div class="card">
+      <h3>Sample Report</h3>
+      <p>A vulnerability assessment report using NIST Special Publication 800-30 Rev. 1. </p>
+      <a href="https://docs.google.com/document/d/12D2XIbluzig_8ou7ImPVlIt70FG9t3NRsl891SobNLA/edit?usp=sharing" target="_blank">View Document</a>
+    </div>
+  </div>
+</section><section id="resume">
+  <h2>Resume</h2>
+  <p>Download my resume:</p>
+  <a href="resume.pdf" target="_blank" style="color:var(--accent);font-weight:500;">Download Resume (PDF)</a>
+</section><section id="contact">
+  <h2>Contact</h2>
+  <p>LinkedIn: <a style="color:var(--accent);" href="https://www.linkedin.com/in/zohal-haidari-zyhomlay"> Zohal Haidari</a> </p>
+  <p>Email: zohal.haidari@auaf.edu.af</p>
+</section></main><footer>
+    <img src="1768647496550.jpg" alt="logo" class="footer-image">
+  <p>© 2026 All Rights Reserved</p>
+</footer><!-- Lightbox --><div class="lightbox" id="lightbox">
+  <span onclick="closeLightbox()">X</span>
+  <img id="lightbox-img" src="" alt="Certificate preview">
+</div><script>
+  const lines = [
+    "> Initializing cyber portfolio...",
+    "> Student: Cybersecurity...",
+    "> Mode: Entry level...",
+    "> Status: Building skills...",
+    "> Access granted."
+  ];
+
+
+  let line = 0;
+  let char = 0;
+  const speed = 50;
+  const typingDiv = document.getElementById("typing");
+
+
+  function typeEffect() {
+    if (line < lines.length) {
+      if (char < lines[line].length) {
+        typingDiv.innerHTML += lines[line].charAt(char);
+        char++;
+        setTimeout(typeEffect, speed);
+      } else {
+        typingDiv.innerHTML += "<br>";
+        char = 0;
+        line++;
+        setTimeout(typeEffect, 400);
+      }
+    }
+  }
+
+
+  window.onload = typeEffect;
+
+
+  const certImages = document.querySelectorAll('.cert-img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+
+  certImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.dataset.full;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+</script></body>
+</html>
